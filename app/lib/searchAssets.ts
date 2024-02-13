@@ -1,9 +1,11 @@
+const helius = process.env.HELIUS_API_KEY;
+
 interface Tokens {
   items: any[];
 }
 
 const fetchTokens = async (walletAddress: string): Promise<Tokens> => {
-  const url = `https://mainnet.helius-rpc.com/?api=key=55a37360-4359-4ff7-b7fb-b802daaa1295`;
+  const url = `https://mainnet.helius-rpc.com/?api-key=${helius}`;
   console.log(`Starting search for tokens for wallet address ${walletAddress}`);
   try {
     const response = await fetch(url, {
