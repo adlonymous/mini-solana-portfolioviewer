@@ -1,4 +1,4 @@
-const helius = process.env.HELIUS_API_KEY;
+const helius = process.env.NEXT_PLUGIN_HELIUS_API_KEY;
 
 interface Tokens {
   items: any[];
