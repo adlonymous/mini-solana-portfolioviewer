@@ -1,4 +1,4 @@
-const helius = process.env.NEXT_PLUGIN_HELIUS_API_KEY;
+const helius = process.env.HELIUS_API_KEY;
 
 interface Tokens {
   items: any[];
@@ -31,7 +31,7 @@ const fetchTokens = async (walletAddress: string): Promise<Tokens> => {
       `Data returned for wallet address ${walletAddress}:`,
       data.result
     );
-    return { items: data.result };
+    return { items: data.result.items };
   } catch (error) {
     console.error(`Error fetching tokens:`, error);
     return { items: [] };

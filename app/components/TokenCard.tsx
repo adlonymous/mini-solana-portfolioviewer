@@ -14,10 +14,12 @@ const TokenCard = ({ token, tokenType }: TokenCardProps) => {
       {/* Other token information */}
       {tokenType === "fungible" ? (
         <div>
-          <Image
+          <img
             src={token.content.links.image}
             alt={token.content.metadata.name}
             className="w-full h-64 object-cover rounded-t-lg"
+            width={200}
+            height={200}
           />
           <div className="p-4">
             <h2 className="font-bold text-xl mb-2">
@@ -32,10 +34,12 @@ const TokenCard = ({ token, tokenType }: TokenCardProps) => {
         </div>
       ) : (
         <div>
-          <Image
+          <img
             src={token.content.links.image}
             alt={token.content.metadata.name}
             className="w-full h-64 object-cover rounded-t-lg"
+            width={200}
+            height={200}
           />
           <div className="p-4">
             <h2 className="font-bold text-xl mb-2">
